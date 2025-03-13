@@ -16,5 +16,6 @@ export interface Note {
     | "gray"
     | "darkgray"
     | "brown"
+    | "black"
   favorite: boolean
 }

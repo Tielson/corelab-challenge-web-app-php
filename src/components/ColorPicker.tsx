@@ -22,6 +22,7 @@ const ColorPicker = ({ onSelectColor }: ColorPickerProps) => {
     { value: "darkgray", label: "Cinza Escuro", hex: "#a6a6a6" },
     { value: "brown", label: "Marrom", hex: "#c4a68a" },
     { value: "white", label: "Branco", hex: "#ffffff" },
+    { value: "black", label: "Preto", hex: "#000000" },
   ];
 
   return (
