@@ -3,6 +3,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { createItem } from "../api/createItem";
+import note from "../assets/note.png";
 import "../styles/Header.scss";
 import { Note } from "../types/note";
 import { NoteCreator } from "./NoteCreator";
@@ -55,7 +56,7 @@ export function Header({ filterText, onFilterChange }: HeaderProps) {
     <header className="header">
       <div className="header-content">
         <div className="logo">
-          <div className="logo-icon">📝</div>
+          <div className="logo-icon"><img src={note} alt="imagem de folhas" /></div>
           <span className="logo-text">CoreNotes</span>
         </div>
 
