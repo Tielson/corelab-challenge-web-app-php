@@ -8,14 +8,14 @@ import { toast } from "react-toastify";
 import { updateItem } from "../api/updateItem";
 import "../styles/NoteUpdate.scss";
 import { Note } from "../types/note";
-import ColorPicker from "./ColorPicker";
+import { ColorPicker } from "./ColorPicker";
 
 interface NoteUpdateProps {
   note: Note;
   close: () => void;
 }
 
-const NoteUpdate = ({ note, close }: NoteUpdateProps) => {
+export function NoteUpdate ({ note, close }: NoteUpdateProps)  {
   const [title, setTitle] = useState(note.title);
   const [content, setContent] = useState(note.content);
   const [stars, setStars] = useState(note.favorite);
@@ -156,5 +156,3 @@ const NoteUpdate = ({ note, close }: NoteUpdateProps) => {
     </div>
   );
 };
-
-export default NoteUpdate;

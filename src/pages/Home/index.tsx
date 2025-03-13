@@ -9,8 +9,8 @@ import { toast } from "react-toastify";
 import { deleteItem } from "../../api/deleteItem";
 import { GetItemsAll } from "../../api/getItems";
 import { NoteFavorite, updateItemFavorite } from "../../api/itemsFavorite";
-import Header from "../../components/Header";
-import NotesList from "../../components/NotesList";
+import { Header } from "../../components/Header";
+import { NotesList } from "../../components/NotesList";
 import "../../styles/App.scss";
 import { Note } from "../../types/note";
 

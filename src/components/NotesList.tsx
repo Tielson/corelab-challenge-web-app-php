@@ -1,6 +1,6 @@
 import "../styles/NotesList.scss";
 import { Note } from "../types/note";
-import NoteCard from "./NoteCard";
+import { NoteCard } from "./NoteCard";
 
 interface NotesListProps {
   notes: Note[]
@@ -14,13 +14,13 @@ interface NotesListProps {
   onChangeColor: (id: string, color: Note["color"]) => void
 }
 
-const NotesList = ({
+export function NotesList({
   notes,
   onToggleFavorite,
   onChangeNoteEdit,
   onDeleteNote,
   onChangeColor,
-}: NotesListProps) => {
+}: NotesListProps) {
   return (
     <div className="notes-list">
       {notes.map((note) => (
@@ -36,5 +36,3 @@ const NotesList = ({
     </div>
   );
 };
-
-export default NotesList;

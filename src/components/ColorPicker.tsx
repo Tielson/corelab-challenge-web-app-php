@@ -7,7 +7,7 @@ interface ColorPickerProps {
   onSelectColor: (color: Note["color"]) => void
 }
 
-const ColorPicker = ({ onSelectColor }: ColorPickerProps) => {
+export function ColorPicker  ({ onSelectColor }: ColorPickerProps) {
   const colors: { value: Note["color"]; label: string; hex: string }[] = [
     { value: "blue", label: "Azul", hex: "#bae2ff" },
     { value: "green", label: "Verde", hex: "#b9ffdd" },
@@ -43,4 +43,3 @@ const ColorPicker = ({ onSelectColor }: ColorPickerProps) => {
   );
 };
 
-export default ColorPicker;

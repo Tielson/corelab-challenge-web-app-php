@@ -6,14 +6,14 @@ import { Button } from "@mantine/core";
 import { useState } from "react";
 import "../styles/NoteCreator.scss";
 import { Note } from "../types/note";
-import ColorPicker from "./ColorPicker";
+import { ColorPicker } from "./ColorPicker";
 
 interface NoteCreatorProps {
   onAddNote: (note: Note) => void
   isPending: boolean
 }
 
-const NoteCreator = ({ onAddNote, isPending }: NoteCreatorProps) => {
+export function NoteCreator({ onAddNote, isPending }: NoteCreatorProps) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [stars, setStars] = useState(false);
@@ -109,12 +109,10 @@ const NoteCreator = ({ onAddNote, isPending }: NoteCreatorProps) => {
         />
       </form>
       <div className="note-footer">
-        <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }} type="submit" onClick={handleSubmit} loading={isPending}>
+        <Button variant="gradient" gradient={{ from: "blue", to: "cyan", deg: 90 }} type="submit" onClick={handleSubmit} loading={isPending}>
           Criar nota
         </Button>
       </div>
     </div>
   );
 };
-
-export default NoteCreator;

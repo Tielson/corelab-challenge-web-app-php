@@ -5,14 +5,14 @@ import { toast } from "react-toastify";
 import { createItem } from "../api/createItem";
 import "../styles/Header.scss";
 import { Note } from "../types/note";
-import NoteCreator from "./NoteCreator";
+import { NoteCreator } from "./NoteCreator";
 
 interface HeaderProps {
   filterText: string;
   onFilterChange: (text: string) => void;
 }
 
-const Header = ({ filterText, onFilterChange }: HeaderProps) => {
+export function Header({ filterText, onFilterChange }: HeaderProps) {
   const [mobileMenuOpened, { open: openMobileMenu, close: closeMobileMenu }] = useDisclosure(false);
   const [opened, { open, close }] = useDisclosure(false);
   const queryClient = useQueryClient();
@@ -141,5 +141,3 @@ const Header = ({ filterText, onFilterChange }: HeaderProps) => {
     </header>
   );
 };
-
-export default Header;

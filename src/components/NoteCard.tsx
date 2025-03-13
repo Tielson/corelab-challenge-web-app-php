@@ -10,8 +10,8 @@ import color from "../assets/Ellipse1.png";
 import edit from "../assets/Frame1.png";
 import "../styles/NoteCard.scss";
 import { Note } from "../types/note";
-import ColorPicker from "./ColorPicker";
-import NoteUpdate from "./NotesUpdate";
+import { ColorPicker } from "./ColorPicker";
+import { NoteUpdate } from "./NotesUpdate";
 
 interface NoteCardProps {
   note: Note
@@ -25,12 +25,12 @@ interface NoteCardProps {
   onChangeColor: (id: string, color: Note["color"]) => void
 }
 
-const NoteCard = ({
+export function NoteCard({
   note,
   onToggleFavorite,
   onDeleteNote,
   onChangeColor,
-}: NoteCardProps) => {
+}: NoteCardProps) {
   const isLightBackground = ["white", "silver", "light-blue", "light-yellow", "light-green", "light-pink", "light-red", "light-lightblue", "light-purple", "light-lime", "light-orange", "light-gray", "light-darkgray", "light-brown"].includes(note.color);
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
@@ -147,5 +147,3 @@ const NoteCard = ({
     </div>
   );
 };
-
-export default NoteCard;
