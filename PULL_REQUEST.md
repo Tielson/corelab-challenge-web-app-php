@@ -38,7 +38,7 @@ Para rodar o projeto localmente, siga os seguintes passos:
 1. Clone o repositório:
 
    ```sh
-   git clone https://github.com/seu-usuario/corelab-web-challenge.git
+   git clone https://github.com/Tielson/corelab-web-challenge.git
    ```
 
 2. Acesse a pasta do projeto:
