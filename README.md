@@ -3,6 +3,7 @@
 You are tasked with building a web application that allows users to create and manage their to-do lists. The application should consist of a responsive webpage built in React, and an API built in PHP Laravel to store and manage the to-do lists.
 
 ### The repositories
+
 The [frontend repository](https://github.com/corelabbr/corelab-challenge-web-app-php)
 
 If you feel more comfortable, you can pick another React framework and show us your skills.
@@ -12,6 +13,7 @@ The [backend repository](https://github.com/corelabbr/corelab-api-challenge-php)
 If you feel more comfortable, you can pick another PHP framework and show us your skills.
 
 ### The Layout
+
 Open the [layout mockup](https://www.figma.com/file/sQrUVHTlyogq3qGdkqGTXN/mockup?node-id=7%3A2&t=ANTOTiqjqGWYuoUr-0) in desktop and mobile version and follow this design as much as possible.
 
 ### The application should have the following functionality:
@@ -23,15 +25,18 @@ Open the [layout mockup](https://www.figma.com/file/sQrUVHTlyogq3qGdkqGTXN/mocku
 5. The favorited items should be displayed at the top of the list.
 
 ### Technical Requirements:
+
 1. The backend API should be built in PHP Laravel framework and use a database of your choice (e.g., MySQL, PostgreSQL, etc.).
 2. The frontend should be built in React and use modern web development tools and best practices.
 3. The application should be responsive and visually appealing.
 
 ### Deliverables:
+
 1. A link to a GitHub repository containing the complete source code for the project.
 2. A written description of how to set up and run the application locally.
 
 ### Evaluation Criteria:
+
 1. Code Quality
 2. Code Format
 3. Code Performance
@@ -47,19 +52,24 @@ Open the [layout mockup](https://www.figma.com/file/sQrUVHTlyogq3qGdkqGTXN/mocku
 13. Is the application visually appealing and responsive?
 
 ### Backend
-Repository: 
+
+Repository:
+
 1. PHP: ^7.4
 2. Laravel: ^8.0
 3. Database: Choose your own, you can even use PostgreSQL.
 
 ### Frontend
-Repository: 
+
+Repository:
+
 1. Node: ^16.15.0
 2. NPM: ^8.5.5
 3. Framework: React TS
 4. Sass or other preprocessor
 
 ### Want to impress us even more?
+
 If you feel comfortable and want to impress us even more, you can do the following:
 
 1. Work on correct types and interfaces

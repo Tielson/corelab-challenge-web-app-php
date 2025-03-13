@@ -1,0 +1,126 @@
+@import 'variables';
+
+.note-creator {
+  background-color: #ffffff;
+  margin: 24px 0;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+    gap: 1rem;
+
+    .note-title {
+      flex: 1 1;
+      font-size: 16px;
+      font-weight: 500;
+      border: 1px solid #adadad;
+      padding: 10px;
+      outline: none;
+      border-radius: 5px;
+
+      &::placeholder {
+        color: $dark-gray;
+      }
+    }
+
+    .star-button {
+      background: none;
+      border: none;
+      color: $medium-gray;
+      cursor: pointer;
+
+      &:hover {
+        color: $amber;
+      }
+
+      &.active {
+        color: $amber;
+      }
+    }
+
+    .color-picker-container {
+      position: relative;
+    }
+  }
+
+  .note-content {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-size: $font-size-sm;
+    font-family: inherit;
+    outline: none;
+
+    &::placeholder {
+      color: $medium-gray;
+    }
+  }
+
+  .note-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  button.action-button.color-picker-button {
+    background: none;
+    border: none;
+    color: $medium-gray;
+    cursor: pointer;
+    padding: $spacing-xs;
+
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+
+  .note-footer {
+    margin: 20px 0 0px;
+  }
+}
+
+.note-creator-form {
+  .color-selector {
+    margin-bottom: $spacing-md;
+
+    label {
+      display: block;
+      margin-bottom: $spacing-sm;
+      font-size: $font-size-sm;
+      color: $dark-gray;
+    }
+
+    .selected-color {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .note-creator .note-header {
+      display: flex;
+      margin-bottom: 16px;
+      gap: 1rem;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      flex-wrap: wrap;
+  }
+
+  .note-creator .note-header .note-title {
+    width: 100%;
+  }
+
+  .note-creator .note-header .color-picker-container .color-picker {
+    left: 0;
+    z-index: 1;
+  }
+}

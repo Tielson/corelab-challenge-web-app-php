@@ -1,0 +1,206 @@
+@import 'variables';
+
+.header {
+  background-color: $white;
+  padding: $spacing-md;
+  box-shadow: $shadow-sm;
+
+  .search-bar {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 $spacing-xl;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: $spacing-sm $spacing-lg $spacing-sm $spacing-md;
+      border: 1px solid $gray;
+      border-radius: $border-radius-md;
+      font-size: $font-size-sm;
+      outline: none;
+
+      &:focus {
+        border-color: $purple;
+      }
+    }
+
+    .search-button {
+      position: absolute;
+      right: $spacing-sm;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: $medium-gray;
+      cursor: pointer;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    .logo-icon {
+      font-size: $font-size-lg;
+      color: $amber;
+    }
+
+    .logo-text {
+      font-weight: 500;
+      color: $dark-gray;
+    }
+  }
+
+  .search-bar {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 $spacing-xl;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: $spacing-sm $spacing-lg $spacing-sm $spacing-md;
+      border: 1px solid $gray;
+      border-radius: $border-radius-md;
+      font-size: $font-size-sm;
+      outline: none;
+
+      &:focus {
+        border-color: $purple;
+      }
+    }
+
+    .search-button {
+      position: absolute;
+      right: $spacing-sm;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: $medium-gray;
+      cursor: pointer;
+    }
+    .close-button {
+      background: none;
+      border: none;
+      color: $dark-gray;
+      cursor: pointer;
+      padding: $spacing-xs;
+
+      &:hover {
+        color: $very-dark-gray;
+      }
+    }
+  }
+
+  .note-actions {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: flex-start;
+
+    .color-picker-container {
+      position: relative;
+    }
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    color: $dark-gray;
+    cursor: pointer;
+    padding: $spacing-xs;
+
+    &:hover {
+      color: $very-dark-gray;
+    }
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: none;
+    align-items: center;
+  }
+
+  .burger-menu {
+    margin-left: auto;
+  }
+
+  // Menu mobile
+ 
+
+  @media (max-width: 767px) {
+    .desktop-only {
+      display: none;
+    }
+  
+    .mobile-only {
+      display: flex;
+    }
+  
+    .header-content {
+      padding: 0 $spacing-sm;
+    }
+  
+    .logo {
+      .logo-text {
+        font-size: $font-size-md;
+      }
+    }
+  }
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding: $spacing-md 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .mobile-search {
+    width: 100%;
+    input {
+      width: 100%;
+      padding: $spacing-sm;
+      border: 1px solid $gray;
+      border-radius: $border-radius-md;
+      font-size: $font-size-sm;
+    }
+  }
+
+  .mobile-create-btn {
+    margin: $spacing-md 0;
+  }
+
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    .mobile-menu-link {
+      padding: $spacing-md;
+      color: $dark-gray;
+      text-decoration: none;
+      border-radius: $border-radius-sm;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+  }
+}

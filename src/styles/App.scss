@@ -1,0 +1,55 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $light-gray;
+  color: $dark-gray;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md;
+  width: 100%;
+}
+
+.mantine-Modal-root {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 9999 !important;
+}
+
+.notes-section {
+  margin-top: $spacing-xl;
+
+  .section-title {
+    font-size: $font-size-md;
+    font-weight: 500;
+    color: $dark-gray;
+    margin-bottom: $spacing-md;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}

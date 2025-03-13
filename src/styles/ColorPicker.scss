@@ -1,0 +1,44 @@
+@import 'variables';
+
+
+.color-picker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: $white;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-lg;
+  padding: $spacing-sm;
+  z-index: 10;
+  width: 200px;
+  border: 1px solid $gray;
+
+  .note-creator .note-header .color-picker-container & {
+    top: 30px;
+    right: 0 !important;
+    left: auto;
+  }
+
+  .mantine-Modal-content .color-picker-container & {
+    left: -179px;
+  }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-xs;
+
+    .color-option {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid $gray;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

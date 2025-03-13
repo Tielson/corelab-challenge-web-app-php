@@ -20,7 +20,15 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "ignores": [
+    "node_modules",
+    "dist",
+    "vite.config.ts"
+  ],
   "include": [
-    "src"
+    "src",
+    "vite.config.ts",
+    "playwright.config.ts",
+    "tests"
   ]
 }
