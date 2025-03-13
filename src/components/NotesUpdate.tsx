@@ -4,6 +4,7 @@ import { Button } from "@mantine/core";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type React from "react";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { updateItem } from "../api/updateItem";
 import "../styles/NoteUpdate.scss";
 import { Note } from "../types/note";
@@ -30,9 +31,29 @@ const NoteUpdate = ({ note, close }: NoteUpdateProps) => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["notes"] });
       close();
+      toast.success("Nota atualizada com sucesso", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     },
     onError: (error) => {
       console.error(error);
+      toast.error("Erro ao atualizar a nota", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   });
 

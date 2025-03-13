@@ -1,6 +1,7 @@
 import { Burger, Button, Drawer, Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "react-toastify";
 import { createItem } from "../api/createItem";
 import "../styles/Header.scss";
 import { Note } from "../types/note";
@@ -23,9 +24,29 @@ const Header = ({ filterText, onFilterChange }: HeaderProps) => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["notes"] });
       close();
+      toast.success("Nota criada com sucesso", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     },
     onError(error) {
       console.log(error);
+      toast.error("Erro ao criar nota", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   });
 

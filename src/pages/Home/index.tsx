@@ -57,6 +57,16 @@ export function Home() {
       queryClient.invalidateQueries({
         queryKey: ["notes"]
       });
+      toast.success("Nota deletada com sucesso", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     },
     onError: (error) => {
       console.error(error);
