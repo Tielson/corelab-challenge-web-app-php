@@ -1,80 +1,97 @@
-## Corelab Challenge:
+# Challenge
 
-You are tasked with building a web application that allows users to create and manage their to-do lists. The application should consist of a responsive webpage built in React, and an API built in PHP Laravel to store and manage the to-do lists.
+Este é um projeto de gerenciamento de tarefas desenvolvido com React, Sass e Mantine. O aplicativo permite criar, ler, atualizar e excluir itens de tarefas, além de marcar favoritos e definir cores para cada tarefa.
 
-### The repositories
-The [frontend repository](https://github.com/corelabbr/corelab-challenge-web-app-php)
+## Funcionalidades
 
-If you feel more comfortable, you can pick another React framework and show us your skills.
+1. Criar, ler, atualizar e excluir itens de tarefas usando a API.
+2. Marcar um item como favorito.
+3. Definir uma cor para cada item de tarefa.
+4. Exibir a lista de tarefas de maneira responsiva e visualmente atraente.
+5. Capacidade de filtrar por itens e cores favoritos.
+6. Itens favoritos são exibidos no topo da lista.
 
-The [backend repository](https://github.com/corelabbr/corelab-api-challenge-php)
+## Diferenciais do Projeto
 
-If you feel more comfortable, you can pick another PHP framework and show us your skills.
+- **Experiência de Usuário Aprimorada**: Interface responsiva e intuitiva para facilitar a organização das tarefas.
+- **Eficiência no Desenvolvimento**: Utiliza tecnologias modernas como React 19, Sass e Mantine para um código limpo e escalável.
+- **Alto Desempenho**: Construído com Vite, garantindo carregamento rápido e otimizado.
+- **Testes End-to-End**: Garantia de qualidade com testes automatizados usando Playwright.
+- **Melhores Práticas de Desenvolvimento**: Padronização de código com ESLint e Prettier, assegurando manutenção eficiente.
 
-### The Layout
-Open the [layout mockup](https://www.figma.com/file/sQrUVHTlyogq3qGdkqGTXN/mockup?node-id=7%3A2&t=ANTOTiqjqGWYuoUr-0) in desktop and mobile version and follow this design as much as possible.
+## Tecnologias Utilizadas
 
-### The application should have the following functionality:
+- React 19
+- Sass
+- Mantine
+- Axios
+- React Query
+- Playwright (para testes e2e)
+- ESLint & Prettier
+- TypeScript
+- Vite
 
-1. Users should be able to create, read, update, and delete to-do items using the API.
-2. Users should be able to mark an item as a favorite.
-3. Users should be able to set a color for each to-do item.
-4. The React frontend should display the user's to-do list in a responsive and visually appealing manner, with the ability to filter by favorite items and color.
-5. The favorited items should be displayed at the top of the list.
+## Instalação e Configuração
 
-### Technical Requirements:
-1. The backend API should be built in PHP Laravel framework and use a database of your choice (e.g., MySQL, PostgreSQL, etc.).
-2. The frontend should be built in React and use modern web development tools and best practices.
-3. The application should be responsive and visually appealing.
+Para rodar o projeto localmente, siga os seguintes passos:
 
-### Deliverables:
-1. A link to a GitHub repository containing the complete source code for the project.
-2. A written description of how to set up and run the application locally.
+1. Clone o repositório:
 
-### Evaluation Criteria:
-1. Code Quality
-2. Code Format
-3. Code Performance
-4. Frontend Design
-5. If your code is Easily Readable
-6. Mobile First approach
-7. Code Responsibility
-8. Features Work
-9. Responsiveness
-10. Does the application meet the functionality requirements listed above?
-11. Is the code well-organized, easy to read, and well-documented?
-12. Are modern web development tools and best practices used?
-13. Is the application visually appealing and responsive?
+   ```sh
+   git clone https://github.com/Tielson/corelab-web-challenge.git
+   ```
 
-### Backend
-Repository: 
-1. PHP: ^7.4
-2. Laravel: ^8.0
-3. Database: Choose your own, you can even use PostgreSQL.
+2. Acesse a pasta do projeto:
 
-### Frontend
-Repository: 
-1. Node: ^16.15.0
-2. NPM: ^8.5.5
-3. Framework: React TS
-4. Sass or other preprocessor
+   ```sh
+   cd corelab-web-challenge
+   ```
 
-### Want to impress us even more?
-If you feel comfortable and want to impress us even more, you can do the following:
+3. Instale as dependências:
 
-1. Work on correct types and interfaces
-2. Work on eslint rules
-3. Work prettier config
-4. Work on docker containers
-5. Work on tests
-6. Work on CI/CD
+   ```sh
+   npm install
+   ```
 
-### What to do when you finish?
+4. Inicie o servidor de desenvolvimento:
 
-Create a file PULL_REQUEST.md where you will describe what you did and how in as much detail as possible. Feel free to add videos for better explanation.
+   ```sh
+   npm start
+   ```
 
-Create a new pull request using the same branch name for Backend and Frontend
+O aplicativo estará disponível em `http://localhost:3000`.
 
-Send us the pull requests and that's all!
+## Testes End-to-End (E2E)
 
-#### Good luck! The sky is the limit 🚀
+Este projeto utiliza o Playwright para testes end-to-end. Para executar os testes, use:
+
+```sh
+npm test
+```
+
+### Testes Implementados:
+
+- Verifica se o título da página está correto.
+- Confirma se o nome da aplicação é exibido.
+- Filtragem correta de notas.
+- Adicionar e remover notas dos favoritos.
+- Edição de notas.
+- Mudança de cor dos cards.
+- Criação e deleção de notas.
+
+Confira o vídeo com a execução dos testes E2E: [Link](https://drive.google.com/file/d/1l1ghNjuwVdiAHrY74Hgaw7zfT5pTdnqU/view?usp=sharing)
+
+## Contribuição
+
+Se deseja contribuir para este projeto, siga estas etapas:
+
+1. Fork o repositório
+2. Crie um branch para sua feature (`git checkout -b feature-nova`)
+3. Commit suas modificações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Envie suas alterações (`git push origin feature-nova`)
+5. Abra um Pull Request
+
+## Por que este projeto se destaca?
+
+O **Corelab Web Challenge** foi desenvolvido seguindo as melhores práticas de desenvolvimento e usabilidade. Ele não apenas resolve um problema comum de organização de tarefas, mas também proporciona uma experiência fluida e intuitiva. Com um código bem estruturado e testado, é um excelente exemplo de como aliar qualidade técnica e facilidade de uso.
+
